@@ -4,8 +4,7 @@ from urllib.request import urlopen
 
 def getAccountID(name_input):
     response = urlopen(
-        "https://acs-garena.leagueoflegends.com/v1/players?name=" + name_input + "&region=PH").read().decode(
-        'utf-8')
+        "https://acs-garena.leagueoflegends.com/v1/players?name=" + name_input + "&region=PH").read().decode('utf-8')
     responseJson = json.loads(response)
     return responseJson.get("accountId")
 
